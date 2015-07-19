@@ -1,21 +1,40 @@
 # This is the default format. 
 # For more see: http://jekyllrb.com/docs/permalinks/
-permalink: /:categories/:year/:month/:day/:title 
+permalink: /:year/:month/:day/:title
 
-exclude: [".rvmrc", ".rbenv-version", "README.md", "Rakefile", "changelog.md"]
-highlighter: pygments
+exclude: [".rvmrc", ".rbenv-version", "README.md", "Rakefile", "changelog.md",
+          "jekyll_serve.sh", "CNAME"]
+#highlighter: pygments
+#highlighter: ""
+
+# for description
+excerpt_separator: "<!-- more -->"
+
+## safe is false by default in local, this is the flag for known from remote.
+#safe: true
+
+# conversion
+markdown:    kramdown
+kramdown:
+  input: GFM
+  #Insert HTML <br /> tags inside paragraphs where the original Markdown document had newlines (by default, Markdown ignores these newlines). default is true. Github is false.
+  hard_wrap: false
+
+redcarpet:
+  extensions: [autolink,with_toc_data]
+
 
 # Themes are encouraged to use these universal variables 
 # so be sure to set them if your theme uses them.
 #
-title : Ancrs Blog
+title : Ancrs Studio
 tagline: Site Tagline
 author :
   name : Tengfei Cui
-  email : cui0628@gmial.com
+  email : cui0628@gmail.com
   github : ancrs
-  twitter : xxxx
-  feedburner : xxxx
+  #twitter : username
+  #feedburner : feedname
 
 # The production_url is only used when full-domain names are needed
 # such as sitemap.txt 
@@ -26,6 +45,23 @@ author :
 # Finally if you are pushing to a GitHub project page, include the project name at the end.
 #
 production_url : http://ancrs.github.io
+#production_sitename : www.thomaszhao.cn
+#repository_url: https://github.com/thomaszhao/thomaszhao.github.io/blob/master/
+
+#  specify configuration in the pages and posts for your site.
+defaults:
+  -
+    scope:
+      path: "_drafts"
+    values:
+      draft_flag: "[draft]"
+  -
+    scope:
+      path: "privates/_posts"
+    values:
+      draft_flag: "[Private]"
+
+
 
 # All Jekyll-Bootstrap specific configurations are namespaced into this hash
 #
@@ -81,37 +117,35 @@ JB :
   #
   comments :
     provider : duoshuo
-    disqus :
-      short_name : jekyllbootstrap
-    livefyre :
-      site_id : 123
-    intensedebate :
-      account : 123abc
-    facebook :
-      appid : 123
-      num_posts: 5
-      width: 580
-      colorscheme: light
-    duoshuo :
-      short_name : ctf628
+    duoshuo:
+            short_name: ctf628
+    #disqus :
+    #  short_name : jekyllbootstrap
+    #livefyre :
+    #  site_id : 123
+    #intensedebate :
+    #  account : 123abc
+    #facebook :
+    #  appid : 123
+    #  num_posts: 5
+    #  width: 580
+    #  colorscheme: light
    
   # Settings for analytics helper
   # Set 'provider' to the analytics provider you want to use.
   # Set 'provider' to false to turn analytics off globally.
   #        
   analytics :
-    provider : google
-    gauges :
-        site_id : 'SITE ID'
+    provider : google 
     google : 
-        tracking_id : 'UA-123-12'
-    getclicky :
-      site_id : 
-    mixpanel :
-        token : '_MIXPANEL_TOKEN_'
-    piwik :
-        baseURL : 'myserver.tld/piwik' # Piwik installation address (without protocol)
-        idsite : '1'                   # the id of the site on Piwik
+      tracking_id : 'UA-58355929-1'
+    #getclicky :
+    #  site_id : 
+    #mixpanel :
+    #    token : '_MIXPANEL_TOKEN_'
+    #piwik :
+    #    baseURL : 'myserver.tld/piwik' # Piwik installation address (without protocol)
+    #    idsite : '1'                   # the id of the site on Piwik
 
   # Settings for sharing helper. 
   # Sharing is for things like tweet, plusone, like, reddit buttons etc.
@@ -119,7 +153,7 @@ JB :
   # Set 'provider' to false to turn sharing off globally.
   #
   sharing :
-    provider : false
+    provider : duoshuo
     
   # Settings for all other include helpers can be defined by creating 
   # a hash with key named for the given helper. ex:

@@ -1,27 +1,8 @@
 /* Custom container */
 
-/* Replaced with normal container and standard footer */
-/*.container-narrow {
-  margin: 0 auto;
-  max-width: 700px; }
-
-.container-narrow > hr {
-  margin: 30px 0; }
-*/
-
-/* Replaced with standard BS3 Navbar */
-/*.navbar .nav {
-  float: right; }*/
-
-/* Jekyll Bootstrap Colors */
-h1, h2, h3, h4 {
-  color: #f22430;
-}
-#footer {
-  background-color: #fdcd60;
-}
-
-
+/*
+ * custmized css for jekyl-bootstrap
+-------------------------------------------------- */
 
 /* posts index */
 .post > h3.title {
@@ -37,10 +18,13 @@ h1, h2, h3, h4 {
   margin: 10px 0;
   text-align: left; }
 
-/* post-full*/
-.post-full .date {
-  margin-bottom: 20px;
-  font-weight: bold; }
+/* page-header*/
+.page-header .meta {
+  color: #93908D;
+}
+.page-header > h1 > a {
+  color: black;
+}
 
 /* tag_box */
 .tag_box {
@@ -77,7 +61,6 @@ h1, h2, h3, h4 {
   background: #57A957;
   border: 1px solid #4c964d;
   color: #FFF; }
-
 
 
 /*
@@ -699,3 +682,7 @@ body {
   background:#f8f8f8;
   border-top:0
 }
+
+
+
+
