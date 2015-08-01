@@ -30,8 +30,7 @@ Test for `back quote`:
 ## 测试换行：
 
 baaaaaaaaaaa aaaaaaaaaaaa aaaaaaaaaaaa aaaaaaaaa aaaaaaaaalaba labal abaaaa aaaaaaaaaa aaaaaaaaaa aaaaaaaa aaaaaa
-aaalabalabala
-baaaaaaaaaaaa aaaaaaaaaaaaa aaaaaaaaaaa aaaaaaaaaaaaaaaaalabalabala
+baaaaaaaaaaaaà aaaaaaaaaaaaa aaaaaaaaaaa aaaaaaaaaaaaaaaaalabalabala
 baaaaaaaaaaaaaa aaaaaaaaaaaaaaaaaaaa aaaaaaaaaaaaaaaaaa alabalabala
 baaaaaaaaaaaaaaa aaaaaaaaaaaaaaaaaaa aaaaaaaaaaaaaaaaaaalabalabala
 
